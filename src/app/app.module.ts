@@ -16,6 +16,9 @@ import { DrinkPage } from '../pages/drink/drink';
 import { FastfooddetailPage } from '../pages/fastfooddetail/fastfooddetail';
 import { DishdetailPage } from '../pages/dishdetail/dishdetail';
 import { DrinkdetailPage } from '../pages/drinkdetail/drinkdetail';
+import { DessertProvider } from '../providers/dessert/dessert';
+import { SweetPage } from '../pages/sweet/sweet';
+import { SweetdetailPage } from '../pages/sweetdetail/sweetdetail';
 @NgModule({
   declarations: [
     MyApp,
@@ -25,7 +28,9 @@ import { DrinkdetailPage } from '../pages/drinkdetail/drinkdetail';
     DrinkPage,
     FastfooddetailPage,
     DishdetailPage,
-    DrinkdetailPage
+    DrinkdetailPage,
+    SweetPage,
+    SweetdetailPage
   ],
   imports: [
     BrowserModule,
@@ -41,7 +46,9 @@ import { DrinkdetailPage } from '../pages/drinkdetail/drinkdetail';
     DrinkPage,
     FastfooddetailPage,
     DishdetailPage,
-    DrinkdetailPage
+    DrinkdetailPage,
+    SweetPage,
+    SweetdetailPage
   ],
   providers: [
     StatusBar,
@@ -49,7 +56,8 @@ import { DrinkdetailPage } from '../pages/drinkdetail/drinkdetail';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     DeliveryProvider,
     SidedishProvider,
-    PotationProvider
+    PotationProvider,
+    DessertProvider
   ]
 })
 export class AppModule {}

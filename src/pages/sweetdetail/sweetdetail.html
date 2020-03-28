@@ -1,0 +1,28 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{sweet.name}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div *ngIf="sweet!=0">
+    <img [src]="sweet.image" alt="">
+    <ion-card>
+      <ion-card-content>
+        <ion-card-title>{{sweet.name}}</ion-card-title>
+        <p>{{sweet.detail}}</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <div *ngIf="sweet==0">Sorry,your information not found!!</div>
+  
+  <ion-list inset>
+  
+    <ion-item>
+      <ion-label>จำนวน</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+  
+  </ion-list>
+</ion-content>

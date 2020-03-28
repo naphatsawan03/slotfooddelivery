@@ -1,0 +1,20 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{dessert.name}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let dessert of dessert">
+    <img [src]="dessert.image" alt="" (click)="goToSweetdetail(dessert.id)">
+    <ion-card-content>
+      <ion-card-title>
+        {{dessert.name}}
+      </ion-card-title>
+      <p>
+        {{dessert.detail}}
+      </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
