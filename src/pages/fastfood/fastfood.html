@@ -1,0 +1,20 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{delivery.name}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let delivery of delivery">
+    <img [src]="delivery.image" alt="" (click)="goToFastfooddetail(delivery.id)">
+    <ion-card-content>
+      <ion-card-title>
+        {{delivery.name}}
+      </ion-card-title>
+      <p>
+        {{delivery.detail}}
+      </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

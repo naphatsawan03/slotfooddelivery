@@ -1,0 +1,20 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{sidedish.name}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<ion-card *ngFor="let sidedish of sidedish">
+  <img [src]="sidedish.image" alt=""(click)="goToDishdetail(sidedish.id)">
+  <ion-card-content>
+    <ion-card-title>
+      {{sidedish.name}}
+    </ion-card-title>
+    <p>
+      {{sidedish.detail}}
+    </p>
+  </ion-card-content>
+</ion-card>
+</ion-content>

@@ -1,14 +1,24 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Slot Food Delivery
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v3">docs</a> will be your guide.
-  </p>
+ <div class="showhead">
+    <img src="https://static.vecteezy.com/system/resources/previews/000/210/776/non_2x/slot-vector-illustration.jpg" alt="">
+ </div>
+ <ion-list>
+   <ion-item (click)="goToFastfood()">
+     <ion-icon name="pizza" item-start></ion-icon>อาหารจานเดียว
+   </ion-item>
+   <ion-item (click)="goToDish()">
+    <ion-icon name="nutrition" item-start></ion-icon>กับแกล้ม
+  </ion-item>
+  <ion-item (click)="goToDrink()">
+    <ion-icon name="wine" item-start></ion-icon>เครื่องดื่ม
+  </ion-item>
+ </ion-list>
 </ion-content>

@@ -1,0 +1,28 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{dish.name}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div *ngIf="dish!=0">
+    <img [src]="dish.image" alt="">
+    <ion-card>
+      <ion-card-content>
+        <ion-card-title>{{dish.name}}</ion-card-title>
+        <p>{{dish.detail}}</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <div *ngIf="dish==0">Sorry,your information not found!!</div>
+  
+  <ion-list inset>
+  
+    <ion-item>
+      <ion-label>จำนวน</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+  
+  </ion-list>
+</ion-content>

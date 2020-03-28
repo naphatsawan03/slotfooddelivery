@@ -1,0 +1,20 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{potation.name}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let potation of potation">
+    <img [src]="potation.image" alt="" (click)="goToDrinkdetail(potation.id)">
+    <ion-card-content>
+      <ion-card-title>
+        {{potation.name}}
+      </ion-card-title>
+      <p>
+        {{potation.detail}}
+      </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
