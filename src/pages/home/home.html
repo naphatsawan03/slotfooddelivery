@@ -1,27 +1,53 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Slot Food Delivery
+      Menu AM Restaurant
     </ion-title>
+    <ion-buttons end padding>
+      <button ion-button color="secondary" outline (click)="goToNewActivity()">เพิ่มรายการอาหาร</button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding >
  <div class="showhead">
-    <img src="https://static.vecteezy.com/system/resources/previews/000/210/776/non_2x/slot-vector-illustration.jpg" alt="">
+    <img src="../../assets/imgs/lo.png" alt="">
  </div>
  <ion-list>
-   <ion-item (click)="goToFastfood()">
+   <ion-list-header  style="background-color:rgb(152, 235, 103)" >อาหาร</ion-list-header>
+   <ion-item style="background-color:rgb(144, 233, 228)"  (click)="goToFastfood()">
      <ion-icon name="pizza" item-start></ion-icon>อาหารจานเดียว
    </ion-item>
-   <ion-item (click)="goToDish()">
-    <ion-icon name="nutrition" item-start></ion-icon>กับแกล้ม
+   <ion-item style="background-color:rgb(101, 191, 214)"  (click)="goToDish()">
+    <ion-icon name="nutrition" item-start></ion-icon>กับข้าว
   </ion-item>
-  <ion-item (click)="goToDrink()">
+  <ion-item style="background-color:rgb(128, 136, 240)"  (click)="goToDrink()">
     <ion-icon name="wine" item-start></ion-icon>เครื่องดื่ม
   </ion-item>
-  <ion-item (click)="goToSweet()">
+  <ion-item style="background-color:rgb(165, 124, 241)"  (click)="goToSweet()">
     <ion-icon name="ice-cream" item-start></ion-icon>ขนมหวาน
   </ion-item>
+  <ion-list-header  style="background-color:rgb(152, 235, 103)" >เกี่ยวกับร้าน AM</ion-list-header>
+  <ion-item style="background-color:rgb(203, 120, 236)"  (click)="goToAboutme()">
+    <ion-icon name="contact" item-start></ion-icon>เกี่ยวกับฉัน
+  </ion-item>
+ 
  </ion-list>
-</ion-content>
+
+ <h2>List Orders</h2>
+ <ion-list>
+   <ion-item-sliding *ngFor="let todo of todolist">
+     <ion-item>
+      <h2>{{todo.table}}</h2>
+      <h2>{{todo.fastfood}}</h2>
+      <p>{{todo.desfast}}</p>
+      
+      </ion-item>
+      <ion-item-options side="right">
+        <button ion-button color="danger" (click)="removeItem(todo)">
+          Delete
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+ </ion-content>

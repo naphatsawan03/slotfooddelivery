@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>About Me</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<div class="showhead">
+<img src="../../assets/imgs/lo.png" alt="">
+<h2>เดลิเวอรี่ร้าน AM ส่งถึงบ้านอาหารอร่อย</h2>
+</div>
+
+<ion-list>
+  <ion-item style="background-color:rgba(129, 224, 134, 0.719)" (click)="goToFriends()">
+    <ion-icon name="contacts" item-start  ></ion-icon>ติดต่อฉัน
+  </ion-item>
+
+  <ion-item style="background-color:rgba(228, 241, 111, 0.719)">
+    <ion-icon name="logo-facebook" item-start ></ion-icon>N'phatsawan rkp
+  </ion-item>
+
+  <ion-item style="background-color:rgba(241, 200, 111, 0.719)">
+    <ion-icon name="logo-google" item-start ></ion-icon>Naphatsawanrkp.22@gmail.com
+  </ion-item>
+
+  <ion-item style="background-color:rgba(243, 146, 89, 0.719)">
+    <ion-icon name="logo-instagram" item-start ></ion-icon>naphatsawan rtn
+  </ion-item>
+
+  <h2>ส่งอีเมล์เพื่อชื่นชมหรือร้องเรียนการบริการ</h2>
+  <p>
+    <button ion-button color="secondary" (click)="send()">
+      E-Mail
+    </button>
+  </p>
+
+</ion-list>
+</ion-content>

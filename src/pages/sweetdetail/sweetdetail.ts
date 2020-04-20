@@ -15,13 +15,16 @@ import { DessertProvider }from '../../providers/dessert/dessert';
 })
 export class SweetdetailPage {
   sweet:any=0;
+ 
   constructor(public navCtrl: NavController, public navParams: 
   NavParams, public data:DessertProvider) {
+    
     var id = this.navParams.get('id');
     this.data.loadById(id).then(result=>{
       this.sweet = result;
     });
   }
+
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SweetdetailPage');

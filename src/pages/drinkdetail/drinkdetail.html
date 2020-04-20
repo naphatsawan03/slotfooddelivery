@@ -11,18 +11,15 @@
     <ion-card>
       <ion-card-content>
         <ion-card-title>{{drink.name}}</ion-card-title>
-        <p>{{drink.detail}}</p>
+        <h2>{{drink.detail}}</h2><br>
+        <p>{{drink.predetail}}</p>
       </ion-card-content>
     </ion-card>
   </div>
   <div *ngIf="drink==0">Sorry,your information not found!!</div>
   
   <ion-list inset>
-  
-    <ion-item>
-      <ion-label>จำนวน</ion-label>
-      <ion-input type="text"></ion-input>
-    </ion-item>
+ 
   
   </ion-list>
 </ion-content>

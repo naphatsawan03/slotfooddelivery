@@ -1,0 +1,109 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Order</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="fromActivity" (ngSubmit)="saveRecord()">
+
+    <ion-list insert>
+
+      <ion-item>
+        <ion-label>Table No.</ion-label>
+        <ion-select name="table" [(ngModel)]="table" multiple="true"  formControlName="table">
+          <ion-option>โต๊ะ 1</ion-option>
+          <ion-option>โต๊ะ 2</ion-option>
+          <ion-option>โต๊ะ 3</ion-option>
+          <ion-option>โต๊ะ 4</ion-option>
+          <ion-option>โต๊ะ 5</ion-option>
+          <ion-option>โต๊ะ 6</ion-option>
+          <ion-option>โต๊ะ 7</ion-option>
+          <ion-option>โต๊ะ 8</ion-option>
+          <ion-option>โต๊ะ 9</ion-option>
+          <ion-option>โต๊ะ 10</ion-option>
+          <ion-option>โต๊ะ 11</ion-option>
+          <ion-option>โต๊ะ 12</ion-option>
+          <ion-option>โต๊ะ 13</ion-option>
+          <ion-option>โต๊ะ 14</ion-option>
+          <ion-option>โต๊ะ 15</ion-option>
+          <ion-option>โต๊ะ 16</ion-option>
+          <ion-option>โต๊ะ 17</ion-option>
+          <ion-option>โต๊ะ 18</ion-option>
+          <ion-option>โต๊ะ 19</ion-option>
+          <ion-option>โต๊ะ 20</ion-option>
+          <ion-option>โต๊ะ 21</ion-option>
+          <ion-option>โต๊ะ 22</ion-option>
+          <ion-option>โต๊ะ 23</ion-option>
+          <ion-option>โต๊ะ 24</ion-option>
+          <ion-option>โต๊ะ 25</ion-option>
+          <ion-option>โต๊ะ 26</ion-option>
+          <ion-option>โต๊ะ 27</ion-option>
+          <ion-option>โต๊ะ 28</ion-option>
+          <ion-option>โต๊ะ 29</ion-option>
+          <ion-option>โต๊ะ 30</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>รายการอาหาร</ion-label>
+        <ion-select name="fastfood" [(ngModel)]="fastfood" multiple="true"  formControlName="fastfood">
+          <ion-option>ข้าวผัด</ion-option>
+          <ion-option>ผัดซีอิ๊ว</ion-option>
+          <ion-option>ข้าวผัดกระเพรา</ion-option>
+          <ion-option>ข้าวไข่เจียว</ion-option>
+          <ion-option>ข้าวผัดพริกแกง</ion-option>
+          <ion-option>ผัดไท</ion-option>
+          <ion-option>ข้าวทอดกระเทียม</ion-option>
+          <ion-option>ข้าวคลุกกะปิ</ion-option>
+          <ion-option>ข้าวหน้าไก่ต้ม</ion-option>
+          <ion-option>ไข่ดาว</ion-option>
+          <ion-option>แกงจืดสาหร่ายเต้าหู้อ่อน</ion-option>
+          <ion-option>ต้มยำทะเล</ion-option>
+          <ion-option>ผัดผัก</ion-option>
+          <ion-option>ปูผัดผงกะหรี่</ion-option>
+          <ion-option>ไก่ทอดทั้งตัว</ion-option>
+          <ion-option>แกงเขียวหวาน</ion-option>
+          <ion-option>ห่อหมกมะพร้าว</ion-option>
+          <ion-option>ต้มยำปลาคัง</ion-option>
+          <ion-option>แกงส้ม</ion-option>
+          <ion-option>ทอดมันกุ้ง</ion-option>
+          <ion-option>น้ำเปล่า</ion-option>
+          <ion-option>น้ำส้ม</ion-option>
+          <ion-option>น้ำสมุนไพร</ion-option>
+          <ion-option>เบียร์ช้าง</ion-option>
+          <ion-option>ไวน์องุ่น</ion-option>
+          <ion-option>วิสกี้</ion-option>
+          <ion-option>น้ำอัดลม</ion-option>
+          <ion-option>ฮันนี่โทส</ion-option>
+          <ion-option>เค้กลาวา</ion-option>
+          <ion-option>บิงซูถาด</ion-option>
+          <ion-option>บิงซูทุเรียน</ion-option>
+          <ion-option>บัวลอย</ion-option>
+          <ion-option>ทับทิมกรอบ</ion-option>
+          <ion-option>ไอศกรีมถ้วย</ion-option>
+          <ion-option>บราวนี่</ion-option>
+          <ion-option>เค้กมูส</ion-option>
+          <ion-option>ชีสเค้ก</ion-option>
+          
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>เพิ่มเติม</ion-label>
+        <ion-input type="text" name="desfast" [(ngModel)]="desfast" Placeholder="desfast" 
+        formControlName="desfast">
+        </ion-input>
+      </ion-item>
+     
+
+    </ion-list>
+    <div class="row">
+      <div class="col col-50">
+        <button ion-button type="submit" [disabled]="!fromActivity.valid">
+          Save
+        </button>
+      </div>
+    </div>
+  </form>
+</ion-content>

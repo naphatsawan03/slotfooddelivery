@@ -19,6 +19,11 @@ import { DrinkdetailPage } from '../pages/drinkdetail/drinkdetail';
 import { DessertProvider } from '../providers/dessert/dessert';
 import { SweetPage } from '../pages/sweet/sweet';
 import { SweetdetailPage } from '../pages/sweetdetail/sweetdetail';
+import { NewactivityPage } from '../pages/newactivity/newactivity';
+import { IonicStorageModule } from '@ionic/storage';
+import { AboutmePage } from '../pages/aboutme/aboutme';
+import { FriendsPage } from '../pages/friends/friends';
+import { SocialSharing } from '@ionic-native/social-sharing';
 @NgModule({
   declarations: [
     MyApp,
@@ -30,12 +35,16 @@ import { SweetdetailPage } from '../pages/sweetdetail/sweetdetail';
     DishdetailPage,
     DrinkdetailPage,
     SweetPage,
-    SweetdetailPage
+    SweetdetailPage,
+    NewactivityPage,
+    AboutmePage,
+    FriendsPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpClientModule
+    HttpClientModule,
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -48,7 +57,10 @@ import { SweetdetailPage } from '../pages/sweetdetail/sweetdetail';
     DishdetailPage,
     DrinkdetailPage,
     SweetPage,
-    SweetdetailPage
+    SweetdetailPage,
+    NewactivityPage,
+    AboutmePage,
+    FriendsPage
   ],
   providers: [
     StatusBar,
@@ -57,7 +69,8 @@ import { SweetdetailPage } from '../pages/sweetdetail/sweetdetail';
     DeliveryProvider,
     SidedishProvider,
     PotationProvider,
-    DessertProvider
+    DessertProvider,
+    SocialSharing
   ]
 })
 export class AppModule {}
